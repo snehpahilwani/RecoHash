@@ -4,9 +4,7 @@ import oauth2 as oauth
 
 
 input_name = input('Enter input: ')
-insta_access_token = '1649756197.244359a.dabb5f7dad544aef808365883b1c0f17'
-twitter_api_key = 'yxs4iq4N37bAz61fxemDyk9bY'
-twitter_api_secret = 'mviDIA309YCEIUTJlZatl5P09LgWlOMK1ZJVcZBlg9v2t3vgPN'
+
 insta_api_url = 'https://api.instagram.com/v1/tags/search?q='+input_name+'&access_token='+insta_access_token
 print(insta_api_url)
 
