@@ -15,7 +15,3 @@ for elem in word_relations_list:
 
 for i in final_lemma_list:
 	print(i)
-
-# for elem in word_relations_list:
-# 	for lemma in elem.lemmas(): 
-# 		print(lemma.name())
