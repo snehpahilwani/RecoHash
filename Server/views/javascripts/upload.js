@@ -5,24 +5,20 @@ $('.upload-btn').on('click', function (){
 });
 
 $('#upload-input').on('change', function(){
-
-  var file = $(this).get(0).files;
-  console.log(file)
-  if (file.length > 0){
-    // create a FormData object which will be sent as the data payload in the
-    // AJAX request
+    var files = $(this).get(0).files;
+    console.log(files)
     var formData = new FormData();
-
-    // loop through all the selected files and add them to the formData object
-     for (var i = 0; i < files.length; i++) {
-       var file = files[i];
-
-    //   // add the files to formData object for the data payload
-     formData.append('uploads[]', file, file.name);
-     }
-    //var form_data = new FormData(uploads[0]);
+    // Loop through each of the selected files.
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+      // Add the file to the request.
+      formData.append('uploads[]', file, file.name);
+    }
+    for (var pair of formData.entries()) {
+    console.log('key: '+pair[0]+ ' ,  val: '+ pair[1]); 
+    }
     $.ajax({
-      url: '/upload',
+      url: 'http://localhost:5000/upload',
       type: 'POST',
       data: formData,
       processData: false,
@@ -63,5 +59,5 @@ $('#upload-input').on('change', function(){
       }
     });
 
-  }
+  
 });

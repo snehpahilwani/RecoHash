@@ -6,4 +6,14 @@
 .DS_Store
 /build
 /captures
+/Model/vgg16*
+/Model/VGG16*
+/Model/*jpg
+/Model/*jpeg
+/Model/*tar
 .externalNativeBuild
+/Server/node_modules
+/Server/package-lock.json
+/Model/__pycache__
+/Model/*txt
+/Model/*xml
